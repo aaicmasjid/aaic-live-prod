@@ -1,0 +1,39 @@
+footer {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  height: 50px;
+  bottom: -700px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+  background-color: #ffffff;
+  opacity: 0.6;
+  filter: alpha(opacity=80); /* For IE8 and earlier */
+  color: #444;
+  font-size: 0.8rem;
+  overflow: hidden;
+}
+
+footer p {
+  text-align: center;
+}
+
+footer .icons a {
+  padding-left: 0.4rem;
+  padding-right: 0.3rem;
+}
+
+footer .icons a,
+footer .icons a i {
+  color: #444;
+  text-decoration: none; 
+}
+
+footer .icons a:hover,
+footer .icons a i:hover {
+  cursor: pointer;
+  color: rgb(1, 205, 180);
+}

@@ -1,0 +1,506 @@
+* {
+  
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+  
+  padding:0;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* below video ocean block begin for background  credit source https://github.com/fireclint/video-bg-react/blob/main/src/index.css */
+* {
+  margin: 0;
+  padding: 10;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: small;
+}
+.main {
+  width: 100%;
+  height: 50vh;
+}
+
+video {
+  width: 100%;
+  height: 50%;
+  object-fit: flex;
+}
+.content {
+  position: inherit;
+  width: 100%;
+  height: 20%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  color: color-mix(in srgb, color 50%, color percentage);
+ 
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: rgba(0,0,0,.4);
+  /* background-color: #000000cc; */
+}
+/* video ocean block end */
+/*begin temparature TempApp block */
+
+.ApiAccess img
+{
+  width: 500px;
+  height: 400px;
+  margin-left: 24rem;
+  margin-top: 3%;
+}
+.SearchMainDiv input
+{
+  width: 15rem;
+  height:2rem;
+  text-align: center;
+  margin-left: 31rem;
+  margin-top: 4%;
+}
+.wave 
+{
+  opacity: 0.3;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  background-color: white;
+  width: 50rem;
+  height: 50rem;
+  margin-top: -20rem;
+  margin-left: -25rem;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 3000ms infinite linear;
+  z-index: 1;
+}
+.wave.-three
+{
+  animation: drift 5000ms infinite linear;
+  z-index: 2 !important;
+  opacity: 0.2;
+}
+.wave.-two
+{
+  animation: drift 7000ms infinite linear;
+  z-index: 3 !important;
+  opacity: 0.1;
+}
+.box::after{
+  content: "";
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  transform: translate3d(0,0,0);
+}
+body{
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Jost", sans-serif;
+}
+html{
+  font-size: 100%;
+  height: 100%;
+}
+html{
+  background-color: black;
+}
+.box
+{
+  background-color: rgb(180, 180, 209);
+  width: 300px;
+  height: 400px;
+}
+.box input
+{
+  margin-top: 5%;
+  margin-left: 14%;
+  border-radius: 25px;
+  height: 50px;
+  padding: 20px;
+  width: 10rem;
+  height: 25px;
+  margin-bottom: 25%;
+}
+.temp,.tempmin_max
+{
+  text-align: center;
+  font-weight: 100;
+}
+.location
+{
+  font-weight: 800;
+  text-align: center;
+}
+
+#clouds{
+	padding: 100px 0;
+	background: rgb(180, 180, 209);
+	background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+	background: -linear-gradient(top, #c9dbe9 0%, #fff 100%);
+	background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+}
+
+/*Time to finalise the cloud shape*/
+.cloud {
+	width: 200px; height: 60px;
+	background: #fff;
+	
+	border-radius: 200px;
+	-moz-border-radius: 200px;
+	-webkit-border-radius: 200px;
+	
+	position: relative; 
+}
+
+.cloud:before, .cloud:after {
+	content: '';
+	position: absolute; 
+	background: #fff;
+	width: 100px; height: 80px;
+	position: absolute; top: -15px; left: 10px;
+	
+	border-radius: 100px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+}
+
+.cloud:after {
+	width: 120px; height: 120px;
+	top: -55px; left: auto; right: 15px;
+}
+
+/*Time to animate*/
+.x1 {
+	-webkit-animation: moveclouds 15s linear infinite;
+	-moz-animation: moveclouds 15s linear infinite;
+	-o-animation: moveclouds 15s linear infinite;
+}
+
+/*variable speed, opacity, and position of clouds for realistic effect*/
+.x2 {
+	left: 200px;
+	
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	transform: scale(0.6);
+	opacity: 0.6; /*opacity proportional to the size*/
+	
+	/*Speed will also be proportional to the size and opacity*/
+	/*More the speed. Less the time in 's' = seconds*/
+	-webkit-animation: moveclouds 25s linear infinite;
+	-moz-animation: moveclouds 25s linear infinite;
+	-o-animation: moveclouds 25s linear infinite;
+}
+
+.x3 {
+	left: -250px; top: -200px;
+	
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0.8; /*opacity proportional to the size*/
+	
+	-webkit-animation: moveclouds 20s linear infinite;
+	-moz-animation: moveclouds 20s linear infinite;
+	-o-animation: moveclouds 20s linear infinite;
+}
+
+.x4 {
+	left: 470px; top: -250px;
+	
+	-webkit-transform: scale(0.75);
+	-moz-transform: scale(0.75);
+	transform: scale(0.75);
+	opacity: 0.75; /*opacity proportional to the size*/
+	
+	-webkit-animation: moveclouds 18s linear infinite;
+	-moz-animation: moveclouds 18s linear infinite;
+	-o-animation: moveclouds 18s linear infinite;
+}
+
+.x5 {
+	left: -150px; top: -150px;
+	
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0.8; /*opacity proportional to the size*/
+	
+	-webkit-animation: moveclouds 20s linear infinite;
+	-moz-animation: moveclouds 20s linear infinite;
+	-o-animation: moveclouds 20s linear infinite;
+}
+
+@-webkit-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-moz-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-o-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+/* for weather TempApp component */
+.ApiAccess img
+{
+  width: 500px;
+  height: 400px;
+  margin-left: 24rem;
+  margin-top: 3%;
+}
+.SearchMainDiv input
+{
+  width: 15rem;
+  height:2rem;
+  text-align: center;
+  margin-left: 31rem;
+  margin-top: 4%;
+}
+.wave 
+{
+  opacity: 0.3;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  background-color: white;
+  width: 50rem;
+  height: 50rem;
+  margin-top: -20rem;
+  margin-left: -25rem;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 3000ms infinite linear;
+  z-index: 1;
+}
+.wave.-three
+{
+  animation: drift 5000ms infinite linear;
+  z-index: 2 !important;
+  opacity: 0.2;
+}
+.wave.-two
+{
+  animation: drift 7000ms infinite linear;
+  z-index: 3 !important;
+  opacity: 0.1;
+}
+.box::after{
+  content: "";
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  transform: translate3d(0,0,0);
+}
+body{
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Jost", sans-serif;
+}
+html{
+  font-size: 100%;
+  height: 100%;
+}
+html{
+  background-color: black;
+}
+.box
+{
+  background-color: rgb(180, 180, 209);
+  width: 300px;
+  height: 400px;
+}
+.box input
+{
+  margin-top: 5%;
+  margin-left: 14%;
+  border-radius: 25px;
+  height: 50px;
+  padding: 20px;
+  width: 10rem;
+  height: 25px;
+  margin-bottom: 25%;
+}
+.temp,.tempmin_max
+{
+  text-align: center;
+  font-weight: 100;
+}
+.location
+{
+  font-weight: 800;
+  text-align: center;
+}
+
+#clouds{
+	padding: 100px 0;
+	background: rgb(180, 180, 209);
+	background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+	background: -linear-gradient(top, #c9dbe9 0%, #fff 100%);
+	background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+}
+
+/*Time to finalise the cloud shape*/
+.cloud {
+	width: 200px; height: 60px;
+	background: #fff;
+	
+	border-radius: 200px;
+	-moz-border-radius: 200px;
+	-webkit-border-radius: 200px;
+	
+	position: relative; 
+}
+
+.cloud:before, .cloud:after {
+	content: '';
+	position: absolute; 
+	background: #fff;
+	width: 100px; height: 80px;
+	position: absolute; top: -15px; left: 10px;
+	
+	border-radius: 100px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+}
+
+.cloud:after {
+	width: 120px; height: 120px;
+	top: -55px; left: auto; right: 15px;
+}
+
+/*Time to animate*/
+.x1 {
+
+}
+
+/*variable speed, opacity, and position of clouds for realistic effect*/
+.x2 {
+	left: 200px;
+	
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	transform: scale(0.6);
+	opacity: 0.6; /*opacity proportional to the size*/
+	
+	/*Speed will also be proportional to the size and opacity*/
+	/*More the speed. Less the time in 's' = seconds*/
+	
+}
+
+.x3 {
+	left: -250px; top: -200px;
+	
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0.8; /*opacity proportional to the size*/
+
+}
+
+.x4 {
+	left: 470px; top: -250px;
+	
+	-webkit-transform: scale(0.75);
+	-moz-transform: scale(0.75);
+	transform: scale(0.75);
+	opacity: 0.75; /*opacity proportional to the size*/
+	
+}
+
+.x5 {
+	left: -150px; top: -150px;
+	
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	opacity: 0.8; /*opacity proportional to the size*/
+	
+}
+
+/* =======below code is for ContactForm component */
+
+body {
+  background: #000;
+  line-height: 26px;
+  margin: 0;
+}
+
+.App {
+  height: 75vh;
+  margin-top: 15vh;
+}
+
+form {
+  margin-top: 20px;
+}
+
+.formRow {
+  margin: 10px 0 20px 0;
+}
+
+.formInput {
+  padding: 15px 10px;
+}
+
+.errorMessage {
+  color: #f45532;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.submit-btn {
+  padding: 15px 50px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+  .submit-message {
+    width: 125px;
+    margin-left: 200px;
+  }
+}
