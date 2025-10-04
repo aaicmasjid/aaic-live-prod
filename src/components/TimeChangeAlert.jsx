@@ -274,10 +274,10 @@
         }if ((mo === 9 && (dt>= 15))) {
           setFajrJamat((fajrJamat) => '6:00 AM');
           setNextFajrChange('Fajr Jamat time change on 14-OCT to 6:15 AM');
-        }if ((mo === 10 && (dt>= 1) && (dt<= 13))) {
+        }if ((mo === 10 && (dt>= 1) && (dt<= 14))) {
           setFajrJamat((fajrJamat) => '6:00 AM');
-          setNextFajrChange('Fajr Jamat time change on 14-OCT to 6:15 AM');
-        }if ((mo === 10 && (dt>= 14))) {
+          setNextFajrChange('Fajr Jamat time change on 15-OCT to 6:15 AM');
+        }if ((mo === 10 && (dt>= 15))) {
           setFajrJamat((fajrJamat) => '6:15 AM');
           setNextFajrChange('Fajr Jamat time change on 03-NOV to 5:45 AM'); 
         }if ((mo === 11 && (dt>= 1) && (dt<= 2))) {
@@ -468,11 +468,11 @@
       }if ((mo === 9 && (dt >= 22))) {
         setIshaJamat((ishaJamat) => '8:30 PM');
         setNextIshaChange('Isha Jamat time change on 01-OCT to 8:00 PM');
-      }if ((mo === 10 && (dt >= 1) && (dt <= 13))) {
+      }if ((mo === 10 && (dt >= 1) && (dt <= 14))) {
+        setIshaJamat((ishaJamat) => '8:15 PM');
+        setNextIshaChange('Isha Jamat time change on 15-OCT to 8:00 PM');
+      }if ((mo === 10 && (dt >= 15))) {
         setIshaJamat((ishaJamat) => '8:00 PM');
-        setNextIshaChange('Isha Jamat time change on 14-OCT to 7:45 PM');
-      }if ((mo === 10 && (dt >= 14))) {
-        setIshaJamat((ishaJamat) => '7:45 PM');
         setNextIshaChange('Isha Jamat time change on 01-NOV to 7:30 PM');
       }if ((mo === 11 && (dt >= 1) && (dt < marDls))) {
         setIshaJamat((ishaJamat) => '7:30 PM');
